@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:housie_landing_page/Modules/Event.dart';
 
+import '../design_system/color.dart';
+
 class EventContainer extends StatelessWidget {
   final Event event;
 
@@ -71,7 +73,7 @@ class EventContainer extends StatelessWidget {
               SizedBox(width: 10),
               CircleAvatar(
                 radius: 30,
-                backgroundColor: Colors.red,
+                backgroundColor: DSColors.primary,
                 child: Text(
                   event.date,
                   textAlign: TextAlign.center,

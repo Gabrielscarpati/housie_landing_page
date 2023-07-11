@@ -7,10 +7,11 @@ class AppScreensList extends StatefulWidget {
 }
 
 class _AppScreensListState extends State<AppScreensList> {
-  List<String> _screens = [
-    'assets/screen1.png',
-    'assets/screen2.png',
-    'assets/screen3.png'
+  final List<String> _screens = [
+    'assets/explicando1.jpeg',
+    'assets/explicando2.jpeg',
+    'assets/explicando3.jpeg',
+    'assets/explicando4.jpeg',
   ];
 
   @override

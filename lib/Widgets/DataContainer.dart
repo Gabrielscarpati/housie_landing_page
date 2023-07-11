@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Screens/ResponsiveUI.dart';
+import '../design_system/color.dart';
 
 class DataContainer extends StatelessWidget {
   final String number;
@@ -29,14 +30,14 @@ class DataContainer extends StatelessWidget {
           Text(
             number,
             style: TextStyle(
-              color: Colors.red,
+              color: DSColors.primary,
               fontSize: ResponsiveUI.isLessThan900(context) ? 25 : 30,
             ),
           ),
           Text(
             type,
             style: TextStyle(
-              color: Colors.red,
+              color: DSColors.primary,
             ),
           ),
         ],

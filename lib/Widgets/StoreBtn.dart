@@ -12,24 +12,30 @@ class StoreBtn extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: ResponsiveUI.isLessThan480(context) ? 160 : 180,
+        width: ResponsiveUI.isLessThan480(context) ? 140 : 180,
         height: 40,
-        color: Colors.black,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset(
-              image,
-              width: ResponsiveUI.isLessThan480(context) ? 25 : 30,
-            ),
-            Text(
-              text,
-              style: TextStyle(
-                fontSize: ResponsiveUI.isLessThan480(context) ? 13 : 15,
-                color: Colors.white,
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(20), // Adjust the radius as needed
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset(
+                image,
+                width: ResponsiveUI.isLessThan480(context) ? 25 : 30,
               ),
-            )
-          ],
+              Text(
+                text,
+                style: TextStyle(
+                  fontSize: ResponsiveUI.isLessThan480(context) ? 13 : 15,
+                  color: Colors.white,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -4,6 +4,7 @@ import '../Widgets/AppScreensList.dart';
 import '../Widgets/FeedScreen.dart';
 import '../Widgets/NavBar.dart';
 import '../Widgets/TopEvents.dart';
+import '../design_system/color.dart';
 import 'ResponsiveUI.dart';
 
 class MobileScreen extends StatelessWidget {
@@ -18,7 +19,7 @@ class MobileScreen extends StatelessWidget {
             ResponsiveUI.isLessThan480(context) ? 25 : 40,
           ),
           decoration: BoxDecoration(
-            color: Colors.red,
+            color: DSColors.primary,
             borderRadius: BorderRadius.circular(30),
           ),
           child: Column(

@@ -11,18 +11,19 @@ class FeedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Powerfull Events\nExplorer Feed',
+                'Housie',
                 style: TextStyle(
                   fontSize: ResponsiveUI.isLessThan1250(context) ? 50 : 60,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
+
                 ),
               ),
               SizedBox(height: 40),
@@ -33,31 +34,31 @@ class FeedScreen extends StatelessWidget {
                         ? 500
                         : 600,
                 child: Text(
-                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                  style: TextStyle(
-                    fontSize: ResponsiveUI.isLessThan1250(context) ? 15 : 17,
+                    "Uma plataforma de serviços domésticos on-line para ajudar os proprietários a reservar serviços domésticos confiáveis e de alta qualidade, como encanamento, conserto de ar condicionado, controle de pragas e muito mais. ministrados por profissionais competentes e treinados. Nós nos esforçamos para tornar o processo de encontrar e contratar provedores de serviços domésticos fácil, conveniente e agradável para todos.",
+                      style: TextStyle(
+                    fontSize: ResponsiveUI.isLessThan1250(context) ? 14 : 17,
                     color: Colors.white,
                   ),
                 ),
               ),
-              SizedBox(height: 40),
-              Row(
+              const SizedBox(height: 40),
+              const Row(
                 children: [
                   StoreBtn(
-                    image: 'assets/appStore.png',
-                    text: 'Download on the\nApp Store',
-                  ),
-                  SizedBox(width: 20),
-                  StoreBtn(
                     image: 'assets/playStore.png',
-                    text: 'Get it on\nGoogle Play',
+                    text: 'Google Play',
+                  ),
+                  SizedBox(width: 8),
+                  StoreBtn(
+                    image: 'assets/appStore.png',
+                    text: 'App Store',
                   ),
                 ],
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
             ],
           ),
-          Row(
+        /*  Row(
             mainAxisAlignment: ResponsiveUI.isLessThan900(context)
                 ? MainAxisAlignment.spaceEvenly
                 : MainAxisAlignment.spaceBetween,
@@ -68,20 +69,20 @@ class FeedScreen extends StatelessWidget {
               ),
               ResponsiveUI.isLessThan900(context)
                   ? SizedBox.shrink()
-                  : SizedBox(width: 30),
+                  : SizedBox(width: 20),
               DataContainer(
                 number: '8,705',
                 type: "Downloads",
               ),
               ResponsiveUI.isLessThan900(context)
                   ? SizedBox.shrink()
-                  : SizedBox(width: 30),
+                  : SizedBox(width: 20),
               DataContainer(
                 number: '25,367',
                 type: "Events",
               ),
             ],
-          ),
+          ),*/
         ],
       ),
     );

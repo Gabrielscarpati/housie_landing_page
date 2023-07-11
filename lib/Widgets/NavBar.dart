@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Screens/ResponsiveUI.dart';
+import '../design_system/color.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -17,7 +18,7 @@ class NavBar extends StatelessWidget {
           Icon(
             Icons.event,
             size: 50,
-            color: Colors.red,
+            color: DSColors.primary,
           ),
           ResponsiveUI.isLessThan900(context)
               ? PopupMenuButton(
