@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import '../Screens/ResponsiveUI.dart';
-import 'DataContainer.dart';
 import 'StoreBtn.dart';
 
 class FeedScreen extends StatelessWidget {
@@ -41,48 +40,18 @@ class FeedScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
-              const Row(
+              const SizedBox(height:80),
+               Row(
                 children: [
+
                   StoreBtn(
                     image: 'assets/playStore.png',
                     text: 'Google Play',
                   ),
-                  SizedBox(width: 8),
-                  StoreBtn(
-                    image: 'assets/appStore.png',
-                    text: 'App Store',
-                  ),
                 ],
               ),
-              const SizedBox(height: 40),
             ],
           ),
-        /*  Row(
-            mainAxisAlignment: ResponsiveUI.isLessThan900(context)
-                ? MainAxisAlignment.spaceEvenly
-                : MainAxisAlignment.spaceBetween,
-            children: [
-              DataContainer(
-                number: '10,000',
-                type: "Users",
-              ),
-              ResponsiveUI.isLessThan900(context)
-                  ? SizedBox.shrink()
-                  : SizedBox(width: 20),
-              DataContainer(
-                number: '8,705',
-                type: "Downloads",
-              ),
-              ResponsiveUI.isLessThan900(context)
-                  ? SizedBox.shrink()
-                  : SizedBox(width: 20),
-              DataContainer(
-                number: '25,367',
-                type: "Events",
-              ),
-            ],
-          ),*/
         ],
       ),
     );

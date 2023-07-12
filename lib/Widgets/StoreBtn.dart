@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../Screens/ResponsiveUI.dart';
 
@@ -9,11 +10,29 @@ class StoreBtn extends StatelessWidget {
   const StoreBtn({Key? key, required this.image, required this.text}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Future<void> _launchURL(String url) async {
+      final Uri uri = Uri(scheme: "https", host: url);
+      if(!await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      )) {
+        throw "Can not launch url";
+      }
+    }
     return GestureDetector(
-      onTap: () {},
+      onTap: () async {
+        String url = 'www.thehousie.com';
+        _launchURL(url);
+      },
+       /* {
+        const url = 'https://thehousie.com/#/';
+        if(await canLaunchUrl(Uri.parse(url))){
+        await canLaunchUrl(Uri.parse(url));
+        }
+        },*/
       child: Container(
-        width: ResponsiveUI.isLessThan480(context) ? 140 : 180,
-        height: 40,
+        width: ResponsiveUI.isLessThan480(context) ? 280 : 360,
+        height: 80,
         decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.circular(20), // Adjust the radius as needed

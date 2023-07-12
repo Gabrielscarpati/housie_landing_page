@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../Widgets/AppScreensList.dart';
 import '../Widgets/FeedScreen.dart';
-import '../Widgets/NavBar.dart';
 import '../Widgets/TopEvents.dart';
 import '../design_system/color.dart';
 import 'ResponsiveUI.dart';
@@ -12,7 +11,6 @@ class MobileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        NavBar(),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
           padding: EdgeInsets.all(
